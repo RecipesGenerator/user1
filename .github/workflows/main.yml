@@ -20,9 +20,6 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-
       - name: HTML/CSS/JS Minifier
         # You may pin to the exact commit or the version.
         # uses: devatherock/minify-js@a25175eaf2c438680b21b73882d4837418e9d58b
