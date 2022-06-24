@@ -4,7 +4,7 @@ name: CI
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "master" branch
+  # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     branches: [ "master" ]
 
@@ -20,7 +20,4 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: HTML/CSS/JS Minifier
-        # You may pin to the exact commit or the version.
-        # uses: devatherock/minify-js@a25175eaf2c438680b21b73882d4837418e9d58b
-        uses: devatherock/minify-js@v1.0.3
+      - run: node minify
