@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "blabla": "node minify-files",
+    "blabla": "node minify-files"
   },
   "repository": {
     "type": "git",
