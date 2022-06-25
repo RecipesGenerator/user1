@@ -1,4 +1,4 @@
-firebase.database().ref('users/' + userEmail.replace(/\./g, "DOT")).once('value').then(function (snap) {
+firebase.database().ref('users/' + userEmail.replace(/\./g, "DOT")).once('value').then(function(snap) {
   let userInfo = snap.val();
   if (userInfo) {
     if (userInfo.blogLink) {
