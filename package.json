@@ -1,0 +1,18 @@
+{
+  "name": "recipes-generator-user1",
+  "version": "1.0.0",
+  "description": "f",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "blabla": "node minify-files"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RecipesGenerator/user1.git"
+  },
+  "devDependencies": {
+    "minify": "^7.0.2"
+  },
+  "dependencies": {}
+}
