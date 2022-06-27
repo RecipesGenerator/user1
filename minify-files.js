@@ -1,1 +1,1 @@
-const minify=require("minify"),fs=require("fs");minify("fff.html").then(b=>{fs.writeFileSync("fff.min.html",b)}).catch(console.error);
+const minify=require("minify"),fs=require("fs");minify("fff.html").then(a=>{fs.writeFileSync("fff.min.html",a)}).catch(console.error);
