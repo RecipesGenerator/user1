@@ -1,1 +1,42 @@
-firebase.database().ref("users/"+userEmail.replace(/\./g,"DOT")).once("value").then(function(c){let a=c.val();a&&(a.blogLink&&(blogLink=a.blogLink,localStorage.setItem("blogLink",a.blogLink)),a.platform&&(platform=a.platform,localStorage.setItem("platform",a.platform)),a.firstName&&(firstName=a.firstName,localStorage.setItem("firstName",a.firstName)),a.lastName&&(lastName=a.lastName,localStorage.setItem("lastName",a.lastName)),a.noJS?(noJS=!0,localStorage.setItem("noJS","true")):noJS=!1,a.noStyles?(noStyles=!0,localStorage.setItem("noStyles","true")):noStyles=!1,a.isFullCode?(isFullCode=!0,localStorage.setItem("isFullCode","true")):isFullCode=!1,(a.noJS||a.noStyles||"godaddy"==platform)&&setSchema("microdata"))});
+firebase.database().ref('users/' + userEmail.replace(/\./g, "DOT")).once('value').then(function (snap) {
+  let userInfo = snap.val();
+  if (userInfo) {
+    if (userInfo.blogLink) {
+      blogLink = userInfo.blogLink;
+      localStorage.setItem("blogLink", userInfo.blogLink);
+    }
+    if (userInfo.platform) {
+      platform = userInfo.platform;
+      localStorage.setItem("platform", userInfo.platform);
+    }
+    if (userInfo.firstName) {
+      firstName = userInfo.firstName;
+      localStorage.setItem("firstName", userInfo.firstName);
+    }
+    if (userInfo.lastName) {
+      lastName = userInfo.lastName;
+      localStorage.setItem("lastName", userInfo.lastName);
+    }
+    if (userInfo.noJS) {
+      noJS = true;
+      localStorage.setItem("noJS", "true");
+    } else {
+      noJS = false;
+    }
+    if (userInfo.noStyles) {
+      noStyles = true;
+      localStorage.setItem("noStyles", "true");
+    } else {
+      noStyles = false;
+    }
+    if (userInfo.isFullCode) {
+      isFullCode = true;
+      localStorage.setItem("isFullCode", "true");
+    } else {
+      isFullCode = false;
+    }
+    if (userInfo.noJS || userInfo.noStyles || platform == 'godaddy') {
+      setSchema('microdata');
+    }
+  }
+});
