@@ -2,7 +2,6 @@
   "name": "recipes-generator-user1",
   "version": "1.0.0",
   "description": "f",
-  "type": "module",
   "main": "index.js",
   "scripts": {
     "blabla": "node minify-files"
